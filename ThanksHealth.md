@@ -3,6 +3,8 @@
 ## Alunos
 - Nome: [Inserir Nome]
 - RM: [Inserir RM]
+- Nome: [Inserir Nome]
+- RM: [Inserir RM]
 
 ## Descrição do Projeto
 Este projeto visa abordar os desafios enfrentados pelas instituições de saúde na gestão manual de registros médicos, destacando a falta de agilidade, possíveis erros e dificuldades na colaboração entre profissionais. A solução proposta, ThanksHealth, é uma aplicação Python que busca otimizar a gestão de registros médicos eletrônicos, proporcionando eficiência, precisão e acessibilidade.
@@ -75,4 +77,4 @@ Síntese dos benefícios que o ThanksHealth proporcionará às instituições de
 [Inserir referências a estudos e sistemas semelhantes]
 
 ## Anexos
-- Protótipo do ThanksHealth (inserir link para o protótipo, se aplicável)
+- Protótipo do ThanksHealth [([inserir link para o protótipo, se aplicável](https://github.com/LuSouza1206/ThanksHealth/blob/main/ThanksHealth.py)https://github.com/LuSouza1206/ThanksHealth/blob/main/ThanksHealth.py)
