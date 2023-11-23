@@ -134,3 +134,50 @@ nav.scrolled ul li a {
 h1 {
   text-align: center;
 }
+
+
+
+.contact-section {
+  margin: 5px 0;
+  padding: 130px 350px;
+  background-color: rgba(255, 255, 255, 0.486);
+  border-radius: 100px;
+  box-shadow: 0 0 100px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+
+.contact-section form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.contact-section label {
+  margin-top: 10px;
+}
+
+.contact-section input,
+.contact-section textarea {
+  width: 100%;
+  padding: 10px;
+  margin-top: 5px;
+  margin-bottom: 15px;
+  border: 1px solid #ccc;
+  border-radius: 75px;
+  box-sizing: border-box;
+}
+
+.contact-section button {
+  padding: 10px 20px;
+  background-color: #007BFF;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.contact-section button:hover {
+  background-color: #0056b3;
+}
+
