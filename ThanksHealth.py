@@ -3,20 +3,35 @@ from datetime import datetime
 
 consultas_agendadas = []
 
+def analisar_historico_medico(paciente):
+    if paciente['idade'] > 60:
+        return ['Consulta Geriátrica']
+    elif paciente['idade'] > 40:
+        return ['Exames de Rotina']
+    return []
+
+def recomendar_consulta(paciente):
+    recomendacoes = analisar_historico_medico(paciente)
+
+    if recomendacoes:
+        print("\nRecomendações de Consulta:")
+        for rec in recomendacoes:
+            print(f"- {rec}")
+    else:
+        print("\nNão há recomendações no momento.")
+
 def is_numeric(entrada):
     return entrada.replace('.', '', 1).isdigit() or (entrada[0] == '-' and entrada[1:].replace('.', '', 1).isdigit())
 
 def validar_entrada(entrada):
     while not is_numeric(entrada):
         entrada = input("Entrada inválida. Por favor, insira um valor numérico: ")
-
     return float(entrada)
 
 def calcular_idade(data_nascimento):
     partes = data_nascimento.split('/')
     if len(partes) != 3 or not all(is_numeric(p) for p in partes):
         return None
-
     hoje = datetime.today()
     data_nascimento = datetime(int(partes[2]), int(partes[1]), int(partes[0]))
 
@@ -27,7 +42,6 @@ def agendar_consulta():
     data = input("Insira a data da consulta (formato DD/MM/AAAA): ")
     hora = input("Insira a hora da consulta (formato HH:MM): ")
 
-    # Verificar se a data é a partir de novembro de 2023
     partes_data = data.split('/')
     if len(partes_data) != 3 or not all(is_numeric(p) for p in partes_data):
         print("Formato de data inválido. Consulta não agendada.")
@@ -37,7 +51,6 @@ def agendar_consulta():
         print("Só é possível agendar consultas a partir de novembro de 2023. Consulta não agendada.")
         return
 
-    # Verificar se o horário está disponível
     for consulta in consultas_agendadas:
         if consulta['data'] == data and consulta['hora'] == hora:
             print("Horário indisponível. Por favor, escolha outro horário.")
@@ -47,11 +60,8 @@ def agendar_consulta():
     data_nascimento = input("Insira a data de nascimento do paciente (formato DD/MM/AAAA): ")
     idade = calcular_idade(data_nascimento)
     tipo_consulta = input("Insira o tipo de consulta: ")
-
-    # Solicitar todas as informações necessárias para o paciente
     telefone = input("Insira o número de telefone do paciente: ")
     endereco = input("Insira o endereço do paciente: ")
-    # Adicione mais campos conforme necessário
 
     consultas_agendadas.append({
         'data': data,
@@ -61,11 +71,9 @@ def agendar_consulta():
         'idade': idade,
         'tipo_consulta': tipo_consulta,
         'telefone': telefone,
-        'endereco': endereco,
-        # Adicione mais campos conforme necessário
+        'endereco': endereco
     })
 
-    # Exibir todos os dados do paciente
     print("\nDados do Paciente:")
     print(f"Nome: {paciente}")
     print(f"Data de Nascimento: {data_nascimento}")
@@ -73,7 +81,7 @@ def agendar_consulta():
     print(f"Tipo de Consulta: {tipo_consulta}")
     print(f"Telefone: {telefone}")
     print(f"Endereço: {endereco}")
-    # Adicione mais campos conforme necessário
+
     print(f"\nConsulta agendada para {data} às {hora}.")
 
 def visualizar_consultas():
@@ -95,17 +103,15 @@ def buscar_paciente_por_nome():
             print(f"Tipo de Consulta: {consulta['tipo_consulta']}")
             print(f"Telefone: {consulta['telefone']}")
             print(f"Endereço: {consulta['endereco']}")
-            # Adicione mais campos conforme necessário
+
             encontrado = True
 
     if not encontrado:
         print(f"Paciente '{nome_paciente}' não encontrado.")
 
-# Restante do código permanece inalterado
-
 def main():
     while True:
-        opcao = input("\nEscolha uma opção:\n1 - Agendar nova consulta\n2 - Visualizar consultas agendadas\n3 - Buscar paciente por nome\n4 - Sair\nOpção: ")
+        opcao = input("\nEscolha uma opção:\n1 - Agendar nova consulta\n2 - Visualizar consultas agendadas\n3 - Buscar paciente por nome\n4 - Sair\n5 - Recomendações com base no histórico médico\nOpção: ")
 
         if opcao == '1':
             agendar_consulta()
@@ -115,6 +121,12 @@ def main():
             buscar_paciente_por_nome()
         elif opcao == '4':
             break
+        elif opcao == '5':
+            if consultas_agendadas:
+                paciente_atual = consultas_agendadas[-1]
+                recomendar_consulta(paciente_atual)
+            else:
+                print("Nenhuma consulta agendada ainda. Não há histórico médico para análise.")
         else:
             print("Opção inválida. Por favor, escolha novamente.")
 
