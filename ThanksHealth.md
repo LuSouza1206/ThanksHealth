@@ -1,10 +1,10 @@
 # ThanksHealth - Otimizando a Gestão de Registros Médicos Eletrônicos
 
 ## Alunos
-- Nome: [Inserir Nome]
-- RM: [Inserir RM]
-- Nome: [Inserir Nome]
-- RM: [Inserir RM]
+- Nome: [Kaio Vinicius Meireles Alves]
+- RM: [RM553282]
+- Nome: [lucas Alves de Souza]
+- RM: [RM553956]
 
 ## Descrição do Projeto
 Este projeto visa abordar os desafios enfrentados pelas instituições de saúde na gestão manual de registros médicos, destacando a falta de agilidade, possíveis erros e dificuldades na colaboração entre profissionais. A solução proposta, ThanksHealth, é uma aplicação Python que busca otimizar a gestão de registros médicos eletrônicos, proporcionando eficiência, precisão e acessibilidade.
@@ -28,7 +28,7 @@ Este projeto visa abordar os desafios enfrentados pelas instituições de saúde
 - Apresentação de resultados utilizando f-strings
 
 ## Vídeo Explicativo
-[Link para o vídeo no YouTube](inserir_link_aqui)
+[Link para o vídeo no YouTube](https://www.youtube.com/watch?v=a7JvXhiU2Ig&ab_channel=KaioMeireles)
 
 ### Pontos Abordados no Vídeo
 1. Identificação do Problema: Apresentação da motivação e solução para o problema.
@@ -77,4 +77,4 @@ Síntese dos benefícios que o ThanksHealth proporcionará às instituições de
 [Inserir referências a estudos e sistemas semelhantes]
 
 ## Anexos
-- Protótipo do ThanksHealth [([inserir link para o protótipo, se aplicável](https://github.com/LuSouza1206/ThanksHealth/blob/main/ThanksHealth.py)https://github.com/LuSouza1206/ThanksHealth/blob/main/ThanksHealth.py)
+- Protótipo do ThanksHealth [([inserir link para o protótipo, se aplicável](https://github.com/LuSouza1206/ThanksHealth/blob/main/ThanksHealth.py)
