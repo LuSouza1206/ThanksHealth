@@ -7,23 +7,30 @@ body {
   padding: 0;
   min-height: 100vh;
   position: relative;
-
 }
 
-body.pagina-home main::before {
+body.pagina-home main::before,
+main::before {
   content: "";
   position: absolute;
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
-  background-image: url('images/Sem\ título.jpg');
   background-size: cover;
   background-attachment: fixed;
   filter: blur(5px);
   z-index: -1;
   display: flex;
   gap: 2rem;
+}
+
+body.pagina-home main::before {
+  background-image: url('images/Sem\ título.jpg');
+}
+
+main::before {
+  background-image: url('images/Fundo.png');
 }
 
 body.contato-page main h1 {
@@ -36,14 +43,10 @@ body.contato-page main h1 {
   font-size: 53px;
 }
 
-
-
-
 header {
   background: linear-gradient(to right, #83f5e2, #33619e);
   color: white;
   padding: 20px 0;
-
   text-align: center;
   border-radius: 10px 10px 0 0;
 }
@@ -52,8 +55,6 @@ nav {
   display: flex;
   justify-content: center;
   align-items: center;
-
-
 }
 
 nav ul {
@@ -91,7 +92,7 @@ main {
   margin: 0;
   padding: 0;
   width: 100%;
-  height: 100vh;
+  min-height: 100vh;
   position: relative;
   display: flex;
   flex-direction: column;
@@ -100,26 +101,10 @@ main {
   gap: 2rem;
 }
 
-main::before {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-image: url('images/Fundo.png');
-  background-size: cover;
-  background-attachment: fixed;
-  filter: blur(5px);
-  z-index: -1;
-  display: flex;
-  gap: 2rem;
-}
-
 main>* {
   position: relative;
+  z-index: 1;
 }
-
 
 
 footer {
@@ -139,16 +124,12 @@ footer {
   align-items: center;
   width: 100%;
   max-width: 1200px;
-  /* Defina o tamanho máximo do contêiner do vídeo conforme necessário */
   margin: 0 auto;
-  /* Centraliza o contêiner do vídeo na página */
 }
 
 .video-container video {
   width: 100%;
   height: auto;
-
-
 }
 
 header.scrolled {
@@ -173,8 +154,6 @@ nav.scrolled ul li a {
 h1 {
   text-align: center;
 }
-
-
 
 .contact-section {
   margin: 5px 0;
@@ -236,14 +215,19 @@ h1 {
 .logo-container h1 {
   font-family: 'VENOSE', sans-serif;
   font-size: 50px;
-  /* Ajuste o tamanho da fonte conforme necessário */
   letter-spacing: 2px;
-  /* Espaçamento entre as letras */
   color: #000000;
-  /* Cor do texto */
 }
 
+.team-section {
+  margin-top: 20px;
+}
 
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 10px;
+}
 
 .team-section {
   margin-top: 20px;
@@ -272,26 +256,18 @@ th {
 
 .team-section table img {
   width: 100px;
-  /* Defina a largura desejada em pixels */
   height: 100px;
-  /* Defina a altura desejada em pixels */
   object-fit: cover;
-  /* Manter a proporção e cortar, caso necessário */
   border-radius: 50%;
-  /* Para fazer as imagens circulares */
   transition: transform 0.3s ease-in-out;
-  /* Adicionar transição ao passar o mouse */
 }
 
 .team-section table img:hover {
   transform: scale(1.1);
-  /* Aumentar o tamanho ao passar o mouse */
   cursor: pointer;
-  /* Mostrar cursor de ponteiro ao passar o mouse */
 }
 
 td {
   font-family: 'Anko', sans-serif;
-  /* Usar a fonte 'Anko' ou substituir por outra de sua escolha */
   font-size: 16px;
 }
