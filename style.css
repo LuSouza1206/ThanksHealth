@@ -26,7 +26,7 @@ main::before {
 }
 
 body.pagina-home main::before {
-  background-image: url('images/Sem\ título.jpg');
+  background-image: url('images/Fundo.png');
 }
 
 main::before {
@@ -269,7 +269,7 @@ th {
 
 td {
   font-family: 'Anko', sans-serif;
-  font-size:16px;
+  font-size: 16px;
 }
 
 .content-container {
@@ -280,7 +280,7 @@ td {
 }
 
 .section-image {
-  max-width: 600px; 
+  max-width: 600px;
   margin-right: 20px;
 }
 
@@ -297,5 +297,28 @@ td {
 .image-caption {
   text-align: center;
   font-style: italic;
+}
 
+.main h1 {
+  font-family: 'VENOSE', sans-serif;
+  color: #000;
+  text-align: center;
+}
+
+.content-container p {
+  font-size: 18px;
+  color: #333;
+}
+
+.section-text {
+  background-color: #f9f9f9;
+  padding: 20px;
+  border-radius: 100px;
+  box-shadow: 0 30px 30px rgba(0, 0, 0, 0.1);
+}
+
+.section-image {
+  max-width: 100%;
+  height: auto;
+  border-radius: 0px;
 }
