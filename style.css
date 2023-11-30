@@ -269,5 +269,33 @@ th {
 
 td {
   font-family: 'Anko', sans-serif;
-  font-size: 16px;
+  font-size:16px;
+}
+
+.content-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 20px;
+}
+
+.section-image {
+  max-width: 600px; 
+  margin-right: 20px;
+}
+
+.section-text {
+  flex: 1;
+}
+
+.center-image {
+  display: block;
+  margin: 20px auto;
+  max-width: 100%;
+}
+
+.image-caption {
+  text-align: center;
+  font-style: italic;
+
 }
