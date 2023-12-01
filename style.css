@@ -118,6 +118,7 @@ footer {
   box-shadow: 0px 0px 50px rgba(0, 0, 0, 0.3);
 }
 
+
 .video-container {
   display: flex;
   justify-content: center;
@@ -216,7 +217,7 @@ h1 {
   font-family: 'VENOSE', sans-serif;
   font-size: 50px;
   letter-spacing: 2px;
-  color: #000000;
+  color: #f8f4f4;
 }
 
 .team-section {
@@ -306,14 +307,14 @@ td {
 }
 
 .content-container p {
-  font-size: 18px;
+  font-size: 22px;
   color: #333;
 }
 
 .section-text {
   background-color: #f9f9f9;
-  padding: 20px;
-  border-radius: 100px;
+  padding: 40px;
+  border-radius: 20px;
   box-shadow: 0 30px 30px rgba(0, 0, 0, 0.1);
 }
 
@@ -321,4 +322,14 @@ td {
   max-width: 100%;
   height: auto;
   border-radius: 0px;
+}
+
+.text-container {
+  font-size: 22px;
+  color: #000000;
+  background-color: #f9f9f9;
+  padding: 10px;
+  border-radius: 20px;
+  box-shadow: 0 30px 30px rgba(0, 0, 0, 0.1);
+  
 }
